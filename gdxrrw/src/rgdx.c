@@ -171,7 +171,7 @@ checkRgdxList (const SEXP lst, rSpec_t *rSpec, int *protectCnt)
     }
     tmpName = CHAR(STRING_ELT(fieldExp, 0));
     if (strlen(tmpName) == 0) {
-      error(fieldErrorMsg);
+      error("Input list element 'field' must be in ['l','m','lo','up','s','all'].");
     }
     rSpec->withField = 1;
     if      (0 == strcasecmp("l", tmpName)) {
@@ -193,7 +193,7 @@ checkRgdxList (const SEXP lst, rSpec_t *rSpec, int *protectCnt)
       rSpec->dField = all;
     }
     else {
-      error(fieldErrorMsg);
+      error("Input list element 'field' must be in ['l','m','lo','up','s','all'].");
      }
   } /* if fieldExp */
 
@@ -525,7 +525,7 @@ SEXP rgdx (SEXP args)
       sprintf (buf, "GDX file %s contains no symbol named '%s'",
                gdxFileName,
                rSpec->name );
-      error (buf);
+      error ("search log for 'contains no symbol named' to find actual error message");
     }
     gdxSymbolInfo (gdxHandle, symIdx, symName, &symDim, &symType);
     gdxSymbolInfoX (gdxHandle, symIdx, &symNNZ, &symUser, symText);
@@ -587,7 +587,7 @@ SEXP rgdx (SEXP args)
       sprintf(buf, "GDX symbol %s (index=%d, symDim=%d, symType=%d)"
               " is not recognized as set, parameter, variable, or equation",
               rSpec->name, symIdx, symDim, symType);
-      error(buf);
+      error("search log for 'not recognized as set' to find actual error message");
     } /* end switch */
 
     if (rSpec->te && symType != GMS_DT_SET) {
@@ -599,7 +599,7 @@ SEXP rgdx (SEXP args)
       if (rSpec->dim != symDim) {
         sprintf(buf, "Symbol %s has dimension %d but you specifed dim=%d",
                 rSpec->name, symDim, rSpec->dim);
-        error(buf);
+        error("search log for 'but you specifed dim' to find actual error message");
       }
     }
   } /* if (withList) */
