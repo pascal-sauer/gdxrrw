@@ -37,11 +37,11 @@
  \code{\link{wgdx}}, \code{\link{igdx}}, \code{\link{rgdx}}, \code{\link{gdxInfo}}
 }
 \examples{
-  # take a sample dataset and reshape it
-  str(airquality);
-  oList <- wgdx.reshape (airquality, 3, symName="airquality",
-                         tName = "dataType", order=c(5,6,0))
   \dontrun{
+    # take a sample dataset and reshape it
+    str(airquality);
+    oList <- wgdx.reshape (airquality, 3, symName="airquality",
+                          tName = "dataType", order=c(5,6,0))
     # send the data to GDX
     wgdx.lst("airquality", oList)
   }

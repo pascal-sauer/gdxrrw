@@ -40,10 +40,9 @@ Steve Dirkse.  Maintainer: \email{R@gams.com}}
  \code{\link{igdx}}, \code{\link{rgdx}}, \code{\link{gdxInfo}}
 }
 \examples{
-  data(trnsport);
-  wgdx("wgdx1.gdx",sf,si,sj,sa,sb,sd);
-
   \dontrun{
+    data(trnsport);
+    wgdx("wgdx1.gdx",sf,si,sj,sa,sb,sd);
     # complete tests and examples can be run in the
     # extdata directory of the gdxrrw package
     # check .libPaths for a hint on where packages are installed

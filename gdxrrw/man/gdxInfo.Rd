@@ -32,8 +32,8 @@ Steve Dirkse.  Maintainer: \email{R@gams.com}}
  \code{\link{igdx}}, \code{\link{rgdx}}, \code{\link{wgdx}}
 }
 \examples{
-  gdxInfo();
   \dontrun{
+    gdxInfo();
     gdxInfo("trnsport.gdx");
     gdxInfo("trnsport.gdx", dump=FALSE, returnDF=TRUE);
   }

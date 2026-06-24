@@ -4,7 +4,7 @@
 \description{
   Initialize (i.e. load) the external GDX libraries that are required
   to interface with GDX data, and report on the status of the
-  initialization.  
+  initialization.
 }
 \usage{igdx(gamsSysDir=NULL, silent=FALSE, returnStr=FALSE)}
 \arguments{
@@ -51,14 +51,14 @@
 
 \seealso{
   \code{\link{rgdx}}, \code{\link{wgdx}}, \code{\link{gams}},
-  \code{\link{gdxInfo}} 
+  \code{\link{gdxInfo}}
 }
 \examples{
   \dontrun{
     igdx("C:\\Program Files\\gams23.6");
     igdx("/usr/gams/23.6.3");
+    igdx();
   }
-  igdx();
 }
 \keyword{ data }
 \keyword{ optimize }

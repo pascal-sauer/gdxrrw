@@ -114,26 +114,26 @@ Steve Dirkse.  Maintainer: \email{R@gams.com}}
  \code{\link{igdx}}, \code{\link{wgdx}}, \code{\link{gdxInfo}}
 }
 \examples{
-  # run R-script trnsport.r from the data subdirectory of the gdxrrw package
-  # to load up some data for writing to a GDX file
-  data(trnsport)
-
-  wgdx("rgdx1",sf,si,sj,sa,sb,sd)
-  ou = rgdx("rgdx1")
-  req <- list(name="f")
-  of = rgdx("rgdx1",req)
-  req <- list(name="i")
-  oi = rgdx("rgdx1",req)
-  req <- list(name="j")
-  oj = rgdx("rgdx1",req)
-  req <- list(name="a")
-  oa = rgdx("rgdx1",req)
-  req <- list(name="b")
-  ob = rgdx("rgdx1",req)
-  req <- list(name="d")
-  od = rgdx("rgdx1",req)
-
   \dontrun{
+    # run R-script trnsport.r from the data subdirectory of the gdxrrw package
+    # to load up some data for writing to a GDX file
+    data(trnsport)
+
+    wgdx("rgdx1",sf,si,sj,sa,sb,sd)
+    ou = rgdx("rgdx1")
+    req <- list(name="f")
+    of = rgdx("rgdx1",req)
+    req <- list(name="i")
+    oi = rgdx("rgdx1",req)
+    req <- list(name="j")
+    oj = rgdx("rgdx1",req)
+    req <- list(name="a")
+    oa = rgdx("rgdx1",req)
+    req <- list(name="b")
+    ob = rgdx("rgdx1",req)
+    req <- list(name="d")
+    od = rgdx("rgdx1",req)
+
     # complete tests and examples can be run in the
     # extdata directory of the gdxrrw package
     # check .libPaths for a hint on where packages are installed
