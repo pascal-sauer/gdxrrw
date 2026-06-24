@@ -18,6 +18,11 @@
 
 #include <R.h>
 #include <Rinternals.h>
+#include <Rversion.h>
+
+#if defined(R_VERSION) && R_VERSION >= 0x040600
+SEXP Rf_findVar(SEXP symbol, SEXP rho);
+#endif
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
